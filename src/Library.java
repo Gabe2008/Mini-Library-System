@@ -1,8 +1,8 @@
 public class Library {
-    private Book[] books;
+    public Book[] books;
 
     public Library() {
-        this.books = new Book[1];
+        this.books = new Book[0];
     }
 
     public Library(Book[] books) {
@@ -38,15 +38,15 @@ public class Library {
         }
         return -1;
     }
-    public boolean isEmpty(){
-        return  books==null||books.length == 0;
-    }
+
     public void sortBooks(){
         for(int i=0; i<books.length-1; i++){
             int minID = i;
             for(int j=i+1; j<books.length; j++){
-                if(books[j].compareTo(books[minID])<0){
-                    minID = j;
+                if(books[i]!=null){
+                    if(books[j].compareTo(books[minID])<0){
+                        minID = j;
+                    }
                 }
             }
             Book temp = books[i];
@@ -57,7 +57,7 @@ public class Library {
 
     public  void printBooks(){
         for (Book book : books) {
-            System.out.println(book + " ,");
+            System.out.println(book);
         }
     }
 }

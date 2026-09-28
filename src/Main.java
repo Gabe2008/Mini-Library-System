@@ -12,5 +12,16 @@ public class Main {
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
+
+        library.printBooks();
+        System.out.println();
+
+        library.sortBooks();
+        library.printBooks();
+        System.out.println();
+
+        for(Book book: library.books){
+            book.read();
+        }
     }
 }

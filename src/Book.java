@@ -88,7 +88,12 @@ public abstract class Book implements Comparable<Book>, Cloneable{
         if(compare!=0){
             return compare;
         } else {
-            return this.getAuthor().compareTo(o.getAuthor());
+            compare = this.getAuthor().compareTo(o.getAuthor());
+            if(compare!=0){
+                return compare;
+            } else {
+                return Integer.compare(this.getYear(), o.getYear());
+            }
         }
     }
 }
