@@ -3,9 +3,11 @@ public class FictionalBook extends Book {
 
     public FictionalBook(){
         super();
+        genre = "";
     }
     public FictionalBook(String title, String author, int year, int pages){
         super(title, author, year, pages);
+        genre = "";
     }
     public FictionalBook(String title, String author, int year, int pages, String genre) {
         super(title, author, year, pages);

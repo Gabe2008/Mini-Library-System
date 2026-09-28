@@ -1,15 +1,16 @@
+import org.w3c.dom.Text;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        FictionalBook book1 = new FictionalBook("Harry Potter and the Philosopher's Stone", "J. K. Rowling", 1997, 250, "Fantasy");
+        Manga book2 = new Manga("Naruto Volume 1", "Masashi Kishimoto", 1999, 192, "Action");
+        Textbook book3 = new Textbook("Foundations of Microeconomics, 9th Edition", "Robin Bade, Michael Parkin", 2020, 600, "Microeconomics");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Library library = new Library();
+        library.addBook(book1);
+        library.addBook(book2);
+        library.addBook(book3);
     }
 }

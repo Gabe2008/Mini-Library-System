@@ -3,9 +3,11 @@ public class Textbook extends Book {
 
     public Textbook(){
         super();
+        subject = "";
     }
     public Textbook(String title, String author, int year, int pages){
         super(title, author, year, pages);
+        subject = "";
     }
     public Textbook(String title, String author, int year, int pages, String subject) {
         super(title, author, year, pages);
